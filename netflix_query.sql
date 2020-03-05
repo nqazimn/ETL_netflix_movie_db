@@ -42,9 +42,18 @@ create view metadata_credits as
 	join metadata
 	on metadata.id = credits.movie_id
 
-select title, writer
-from metadata_credits;
+SELECT  title,
+		COUNT(writer) AS count_of_writers
+FROM metadata_credits
+GROUP BY metadata_credits.title
+ORDER BY metadata_credits.title ASC;
 
+SELECT  title,
+		writer,
+		revenue,
+		budget
+FROM metadata_credits
+ORDER BY budget DESC;
 
 select *
 from metadata_credits
