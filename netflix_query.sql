@@ -1,4 +1,4 @@
-drop table metadata;
+drop table if exists metadata;
 
 create table metadata(
 	budget INT,
@@ -11,7 +11,7 @@ create table metadata(
 select *
 from metadata
 
-drop table titles;
+drop table if exists titles;
 
 create table titles(
 	type VARCHAR,
@@ -24,7 +24,7 @@ create table titles(
 select *
 from titles
 
-drop table credits;
+drop table if exists credits;
 
 create table credits(
 	movie_id INT,
@@ -35,11 +35,10 @@ select *
 from credits
 
 create view metadata_credits as
-
-select *
-from credits
-join metadata
-on metadata.id = credits.movie_id
+	select *
+	from credits
+	join metadata
+	on metadata.id = credits.movie_id
 
 select *
 from metadata_credits
