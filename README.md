@@ -71,6 +71,13 @@ After conversion of each record to a dictionary, it was straight forward to sear
 
 Downloaded the raw file `netflix_titles.csv` [Kaggle](https://www.kaggle.com/shivamb/netflix-shows) and cleaned it in Excel to remove extraneous columns. Renamed the file `netflix_titles_transformed.csv` and saved it into the _Resources_ folder.
 
+## Entity-Relationship-Diagram
+The cleaned data files result in a relational database which are connected as shown by the following ERD.
+
+<p align="center">
+  <img src="Images/netflix_ERD.png">
+</p>
+
 ## Data Loading to `PostgreSQL`
 
 Created a Jupyter Notebook and read the following cleaned CSV files into a Pandas dataframe, verifying column order and formatting:
