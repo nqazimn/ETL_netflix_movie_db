@@ -91,4 +91,4 @@ Created a Jupyter Notebook and read the following cleaned CSV files into a Panda
 
 Created a `SQL` database named "ETL_project" in pgAdmin4 and wrote a query to create tables for each of the three transformed CSVs. Needed to reformat the "revenue" column in the `metadata` table from `FLOAT` to `NUMERIC(18,1)` due to repeated errors in reading the flie.
 
-Joined the `metadata` and `credits` tables on the common `id` with `movie_id columns`, then joined the resulting view with the `titles` table on the common `title` columns.
+Joined the `metadata` and `credits` tables on the common `id` and `movie_id` columns, then joined the resulting view with the `titles` table on the common `title` columns.
