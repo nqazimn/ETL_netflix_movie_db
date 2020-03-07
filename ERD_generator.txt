@@ -1,0 +1,20 @@
+titles
+-
+type VARCHAR
+title PK VARCHAR FK - metadata.title
+director VARCHAR
+country VARCHAR
+release_year INT
+
+credits
+-
+movie_id PK INT
+writer VARCHAR
+
+metadata
+-
+budget INT
+revenue NUMERIC(18,1)
+id PK INT FK - credits.movie_id
+original_title VARCHAR
+title FK VARCHAR
