@@ -1,5 +1,9 @@
 # ETL_netflix_movie_db
-This is a mock project built for practicing ETL processes
+This is a mock project built for practicing ETL processes.
+
+<p align="center">
+  <img src="Images/etl_image.jpg">
+</p>
 
 ## Background
 While there is a lot of information available on starring actors and movie directors and producers, not a lot of spotlight is offered to the people working behind-the-scenes, such as stunt-persons, writers, sound technicians etc. 
