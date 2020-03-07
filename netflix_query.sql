@@ -13,8 +13,6 @@ create table metadata(
 select *
 from metadata
 
-
-
 create table titles(
 	type VARCHAR,
 	title VARCHAR,
@@ -25,8 +23,6 @@ create table titles(
 
 select *
 from titles
-
-
 
 create table credits(
 	movie_id INT,
@@ -39,23 +35,9 @@ from credits
 create view metadata_credits as
 	select *
 	from credits
-	join metadata
-	on metadata.id = credits.movie_id
-
-SELECT  title,
-		COUNT(writer) AS count_of_writers
-FROM metadata_credits
-GROUP BY metadata_credits.title
-ORDER BY metadata_credits.title ASC;
-
-SELECT  title,
-		writer,
-		revenue,
-		budget
-FROM metadata_credits
-ORDER BY budget DESC;
+	join metadata on metadata.id = credits.movie_id
 
 select *
 from metadata_credits
-join titles
-on titles.title = metadata_credits.title
+join titles on titles.title = metadata_credits.title
+
