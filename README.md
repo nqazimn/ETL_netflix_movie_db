@@ -1,7 +1,19 @@
 # ETL_netflix_movie_db
-This is a mock project built for practicing ETL processes.
+This is a mock project built for practicing ETL processes
 
 ## Background
+While there is a lot of information available on starring actors and movie directors and producers, not a lot of spotlight is offered to the people working behind-the-scenes, such as stunt-persons, writers, sound technicians etc. 
+
+In this _fictional_ project, the [Writer's Guild of America (WGA)](https://www.wga.org/) wants to analyze the number and frequency of similar writers who have worked on different movies all around the globe. Our group was tasked with the ETL phase of the project which was to create a relational database of movies revenues, budgets and writers attached to each movie.
+
+## Data Sources
+The data was acquired via [Kaggle](https://www.kaggle.com/) in a `.csv` format from the followng links:-
+
+1. `credits.csv` and `movie_metadata.csv` from <https://www.kaggle.com/rounakbanik/the-movies-dataset#movies_metadata.csv>
+
+2. `netflix_titles.csv` from <https://www.kaggle.com/shivamb/netflix-shows>
+
+Further information about the data and its original sources can be found at the corresponding links included above.
 
 ## Prerequisites
 The project was completed using the following `Python` packages:-
@@ -12,23 +24,6 @@ json
 sqlAlchemy
 ```
 `PostgreSQL` was used to create the final database: `ETL_project`.
-## Data Sources
-`https://www.kaggle.com/rounakbanik/the-movies-dataset#movies_metadata.csv`
-
-`https://www.kaggle.com/shivamb/netflix-shows`
-
-### Paul
-
-* Downloaded the raw file "netflix_titles.csv" (from https://www.kaggle.com/shivamb/netflix-shows) and cleaned it in Excel to remove extraneous columns. Renamed the file "netflix_titles_transformed.csv" and saved it into the Resources folder.
-
-* Created a Jupyter Notebook and read the following cleaned CSVs into a Pandas dataframe, verifying column order and formatting:
-	netflix_titles_transformed.csv
-	movie_writers_df.csv
-	movie_metadata_transformed.csv
-
-* Created a SQL database named "ETL_project" in pgAdmin 4 and wrote a query to create tables for each of the three CSVs. Needed to reformat the "revenue" column in the "metadata" table from FLOAT to NUMERIC(18,1).
-
-* Joined the "metadata" and "credits" tables on the common "id/movid_id" columns, then joined the resulting view with the "titles" table on the common "title" columns.
 
 ## Data Clean-up
 
@@ -74,4 +69,15 @@ After conversion of each record to a dictionary, it was straight forward to sear
 
 ### 3. Netflix titles
 
+Downloaded the raw file `netflix_titles.csv` [Kaggle](https://www.kaggle.com/shivamb/netflix-shows) and cleaned it in Excel to remove extraneous columns. Renamed the file `netflix_titles_transformed.csv` and saved it into the _Resources_ folder.
 
+## Data Loading to `PostgreSQL`
+
+Created a Jupyter Notebook and read the following cleaned CSV files into a Pandas dataframe, verifying column order and formatting:
+* netflix_titles_transformed.csv
+* movie_writers_df.csv
+* movie_metadata_transformed.csv
+
+Created a `SQL` database named "ETL_project" in pgAdmin4 and wrote a query to create tables for each of the three transformed CSVs. Needed to reformat the "revenue" column in the `metadata` table from `FLOAT` to `NUMERIC(18,1)` due to repeated errors in reading the flie.
+
+Joined the `metadata` and `credits` tables on the common `id` with `movid_id columns`, then joined the resulting view with the `titles` table on the common `title` columns.
