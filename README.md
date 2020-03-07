@@ -8,7 +8,7 @@ This is a mock project built for practicing ETL processes.
 
 # Paul
 
-* Downloaded the raw file "netflix_titles.csv" (from https://www.kaggle.com/shivamb/netflix-shows) and cleaned it to remove extraneous columns. Renamed the file "netflix_titles_transformed.csv" and saved it into the Resources folder.
+* Downloaded the raw file "netflix_titles.csv" (from https://www.kaggle.com/shivamb/netflix-shows) and cleaned it in Excel to remove extraneous columns. Renamed the file "netflix_titles_transformed.csv" and saved it into the Resources folder.
 
 * Created a Jupyter Notebook and read the following cleaned CSVs into a Pandas dataframe, verifying column order and formatting:
 	netflix_titles_transformed.csv
