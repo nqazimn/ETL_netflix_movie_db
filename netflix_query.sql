@@ -2,6 +2,7 @@ drop table if exists metadata;
 drop table if exists titles;
 drop table if exists credits;
 
+--Creating metadata table
 create table metadata(
 	budget INT,
 	revenue NUMERIC(18,1),
@@ -13,8 +14,6 @@ create table metadata(
 select *
 from metadata
 
-
-
 create table titles(
 	type VARCHAR,
 	title VARCHAR,
@@ -25,8 +24,6 @@ create table titles(
 
 select *
 from titles
-
-
 
 create table credits(
 	movie_id INT,
