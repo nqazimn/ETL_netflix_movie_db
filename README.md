@@ -50,7 +50,7 @@ The following process flow was adopted to clean-up the sliced `movie_metadata_df
 
 While there were no challenges in converting the datatype of **revenue** column to numeric values using `pd.numeric`, the **budget** column had inconsistent datatypes which returned an error. Upon more investigation it was found that three rows did not contain integer values which could be accurately converted to numeric. The decision was made to drop these rows from the original database.
    
-In order to locate and drop these rows, [`.str.match('/')`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.match.html) function was employed on the **budget** column.
+In order to locate and drop these rows, [`.str.match()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.match.html) function was employed on the **budget** column.
 
 ### 2. Movie credits
 The original movie credits file had a complex configuration, as shown in the following image.
