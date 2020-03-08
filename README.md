@@ -42,7 +42,7 @@ For the purpose of this _fictional_ project, only the data regarding **budget, i
   <img src="Images/movie_metadata_sliced.png">
 </p>
 
-The following process flow was adoptedssssssssssss to clean-up the sliced `movie_metadata_df` before exporting it as a `.csv` to be loaded in `PostgreSQL`.
+The following process flow was adopted to clean-up the sliced `movie_metadata_df` before exporting it as a `.csv` to be loaded in `PostgreSQL`.
 
 * Import all columns of raw data file as `str` datatype in Python using `pandas` dataframe.  
 * Slice the dataframe to obtain the required columns.
