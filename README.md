@@ -8,7 +8,7 @@ This is a mock project built for practicing ETL processes.
 ## Background
 While there is a lot of information available on starring actors and movie directors and producers, not a lot of spotlight is offered to the people working behind the scenes, such as stuntpersons, writers, sound technicians etc. 
 
-In this _fictional_ project, the [Writer's Guild of America (WGA)](https://www.wga.org/) wants to analyze the number and frequency of similar writers who have worked on different movies all around the globe. Our group was tasked with the ETL phase of the project which was to create a relational database of movies revenues, budgets and writers attached to each movie.
+In this _fictional_ project, the [Writer's Guild of America (WGA)](https://www.wga.org/) wants to analyze the number and frequency of writers who have worked on various movies all around the globe. Our two-man team was tasked with the ETL phase of the project, which was to create a relational database of movie revenuess, budgets and writers attached to each movie.
 
 ## Data Sources
 The data was acquired via [Kaggle](https://www.kaggle.com/) in a `.csv` format from the followng links:-
@@ -25,9 +25,9 @@ The project was completed using the following `Python` packages:
 os
 pandas
 json
-sqlAlchemy
+sqlalchemy
 ```
-`PostgreSQL` was used to create the final database: `ETL_project`.
+`PostgreSQL` was used to create the final database, namely: `ETL_project`.
 
 ## Data Clean-up
 
