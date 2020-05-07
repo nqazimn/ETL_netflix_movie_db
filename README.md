@@ -32,7 +32,7 @@ sqlalchemy
 ## Data Clean-up
 
 ### 1. Movie metadata
-The main movie metadata file `movies_metadata.csv` contains information on approximately 45,000 movies. The following image displays the data is included in the original `.csv` file. 
+The main movie metadata file `movies_metadata.csv` contains information on approximately 45,000 movies. The following image displays the data that is included in the original `.csv` file. 
 <p align="center">
   <img src="Images/movie_metadata_data.png">
 </p>
